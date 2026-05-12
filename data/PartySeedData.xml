@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-facade-xml type="seed">
+
+    <!-- Party: Person -->
+    <party.Party partyId="PER001" partyTypeEnumId="PERSON" createdDate="2024-01-15T10:00:00"/>
+    <party.Person partyId="PER001" firstName="John" lastName="Doe" dateOfBirth="1990-05-20"/>
+
+    <!-- Party: Party Group -->
+    <party.Party partyId="ORG001" partyTypeEnumId="PARTY_GROUP" createdDate="2024-01-15T10:00:00"/>
+    <party.PartyGroup partyId="ORG001" groupName="Acme Corporation" description="A sample organization"/>
+
+    <!-- Contact Mechanisms -->
+    <party.ContactMech contactMechId="CM001" contactMechTypeEnumId="EMAIL" infoString="john.doe@example.com" createdDate="2024-01-15T10:00:00"/>
+    <party.ContactMech contactMechId="CM002" contactMechTypeEnumId="TELECOM_NUMBER" infoString="+1-555-1234" createdDate="2024-01-15T10:00:00"/>
+
+    <!-- Party Contact Mech Links -->
+    <party.PartyContactMech partyId="PER001" contactMechId="CM001" fromDate="2024-01-15T10:00:00"/>
+    <party.PartyContactMech partyId="PER001" contactMechId="CM002" fromDate="2024-01-15T10:00:00"/>
+
+</entity-facade-xml>
