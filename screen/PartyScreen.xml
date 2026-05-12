@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-3.xsd"
+        default-menu-title="Party Screen" default-menu-index="1">
+
+    <actions>
+        <entity-find entity-name="party.Party" list="partyList">
+            <order-by field-name="partyId"/>
+        </entity-find>
+    </actions>
+
+    <widgets>
+        <label text="Party List" type="h2"/>
+        <form-list name="PartyList" list="partyList" skip-form="true">
+            <field name="partyId">
+                <default-field title="Party ID"><display/></default-field>
+            </field>
+            <field name="partyTypeEnumId">
+                <default-field title="Party Type"><display/></default-field>
+            </field>
+            <field name="createdDate">
+                <default-field title="Created Date"><display/></default-field>
+            </field>
+        </form-list>
+    </widgets>
+
+</screen>
